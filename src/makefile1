@@ -1,0 +1,15 @@
+CC = gcc
+DEPS = lab2.h
+OBJS = lab2.o lab2_funcs.o
+
+lab2: $(OBJS)
+		$(CC) -o lab2 $(OBJS) -lm
+
+lab2.o: lab2.c
+		$(CC) -c lab2.c
+
+lab2_funcs.o: lab2_funcs.c
+		$(CC) -c lab2_funcs.c
+
+clean :
+	rm lab2 $(OBJS)
